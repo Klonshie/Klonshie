@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Klonshie</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>Klonshie</h1>
+    <p class="warning">
+      ⚠️ Safety: flashing lights can trigger seizures. Flashing starts OFF. Use STOP anytime.
+    </p>
+
+    <section class="panel" id="panel" aria-label="Flashing light panel"></section>
+
+    <section class="controls">
+      <button id="startBtn">Start</button>
+      <button id="stopBtn" class="danger">STOP</button>
+
+      <div class="row">
+        <label>
+          <input type="checkbox" id="flashToggle" />
+          Flashing lights
+        </label>
+
+        <label>
+          <input type="checkbox" id="soundToggle" />
+          Alarm sound
+        </label>
+      </div>
+
+      <div class="row">
+        <label for="speed">Flash speed (safer range)</label>
+        <input id="speed" type="range" min="0.5" max="2" step="0.1" value="1" />
+        <span id="speedVal">1.0 Hz</span>
+      </div>
+
+      <div class="row">
+        <label for="volume">Volume</label>
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.35" />
+        <span id="volVal">35%</span>
+      </div>
+    </section>
+
+    <footer class="foot">
+      Tip: If you feel dizzy, headache, or weird—hit STOP and take a break.
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
